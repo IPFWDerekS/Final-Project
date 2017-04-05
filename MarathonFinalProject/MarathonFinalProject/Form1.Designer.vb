@@ -28,6 +28,8 @@ Partial Class frmMainForm
         Me.menuitemRunnerForm = New System.Windows.Forms.ToolStripMenuItem()
         Me.menustrpViewInventory = New System.Windows.Forms.ToolStripMenuItem()
         Me.menustrpExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,7 +39,7 @@ Partial Class frmMainForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolstrpMenu})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(791, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(694, 33)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -72,11 +74,36 @@ Partial Class frmMainForm
         Me.menustrpExit.Size = New System.Drawing.Size(214, 30)
         Me.menustrpExit.Text = "Exit"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 28.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(60, 100)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(531, 69)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Tag = ""
+        Me.Label1.Text = "City Run Marathon 2017"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Brush Script MT", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(51, 211)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(608, 34)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Thank you for volunteering! You make all of this possible! "
+        '
         'frmMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(791, 469)
+        Me.ClientSize = New System.Drawing.Size(694, 327)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMainForm"
@@ -94,4 +121,6 @@ Partial Class frmMainForm
     Friend WithEvents menuitemRunnerForm As ToolStripMenuItem
     Friend WithEvents menustrpViewInventory As ToolStripMenuItem
     Friend WithEvents menustrpExit As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
