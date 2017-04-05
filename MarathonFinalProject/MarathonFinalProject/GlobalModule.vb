@@ -1,0 +1,3 @@
+﻿Module GlobalModule
+
+End Module
