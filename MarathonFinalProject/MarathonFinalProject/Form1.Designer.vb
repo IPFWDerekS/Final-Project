@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmMainForm
+Partial Class frmViewRunner
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,105 +22,102 @@ Partial Class frmMainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.toolstrpMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menustrpbtnAddRunner = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menuitemRunnerForm = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menustrpViewInventory = New System.Windows.Forms.ToolStripMenuItem()
-        Me.menustrpExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.btnOkay = New System.Windows.Forms.Button()
+        Me.dgvRunners = New System.Windows.Forms.DataGridView()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnEmailConditions = New System.Windows.Forms.Button()
+        CType(Me.dgvRunners, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'lblName
         '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolstrpMenu})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(694, 33)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'toolstrpMenu
-        '
-        Me.toolstrpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menustrpbtnAddRunner, Me.menuitemRunnerForm, Me.menustrpViewInventory, Me.menustrpExit})
-        Me.toolstrpMenu.Name = "toolstrpMenu"
-        Me.toolstrpMenu.Size = New System.Drawing.Size(69, 29)
-        Me.toolstrpMenu.Text = "Menu"
-        '
-        'menustrpbtnAddRunner
-        '
-        Me.menustrpbtnAddRunner.Name = "menustrpbtnAddRunner"
-        Me.menustrpbtnAddRunner.Size = New System.Drawing.Size(214, 30)
-        Me.menustrpbtnAddRunner.Text = "Add Runner"
-        '
-        'menuitemRunnerForm
-        '
-        Me.menuitemRunnerForm.Name = "menuitemRunnerForm"
-        Me.menuitemRunnerForm.Size = New System.Drawing.Size(214, 30)
-        Me.menuitemRunnerForm.Text = "Runner Form"
-        '
-        'menustrpViewInventory
-        '
-        Me.menustrpViewInventory.Name = "menustrpViewInventory"
-        Me.menustrpViewInventory.Size = New System.Drawing.Size(214, 30)
-        Me.menustrpViewInventory.Text = "View Inventory"
-        '
-        'menustrpExit
-        '
-        Me.menustrpExit.Name = "menustrpExit"
-        Me.menustrpExit.Size = New System.Drawing.Size(214, 30)
-        Me.menustrpExit.Text = "Exit"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Brush Script MT", 28.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(60, 100)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(531, 69)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Tag = ""
-        Me.Label1.Text = "City Run Marathon 2017"
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(70, 76)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(59, 20)
+        Me.lblName.TabIndex = 0
+        Me.lblName.Text = "Name: "
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Brush Script MT", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(51, 211)
+        Me.Label2.Location = New System.Drawing.Point(29, 116)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(608, 34)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Thank you for volunteering! You make all of this possible! "
+        Me.Label2.Size = New System.Drawing.Size(100, 20)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Bib Number: "
         '
-        'frmMainForm
+        'btnOkay
+        '
+        Me.btnOkay.Location = New System.Drawing.Point(557, 49)
+        Me.btnOkay.Name = "btnOkay"
+        Me.btnOkay.Size = New System.Drawing.Size(105, 47)
+        Me.btnOkay.TabIndex = 2
+        Me.btnOkay.Text = "OK"
+        Me.btnOkay.UseVisualStyleBackColor = True
+        '
+        'dgvRunners
+        '
+        Me.dgvRunners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRunners.Location = New System.Drawing.Point(50, 201)
+        Me.dgvRunners.Name = "dgvRunners"
+        Me.dgvRunners.RowTemplate.Height = 28
+        Me.dgvRunners.Size = New System.Drawing.Size(634, 299)
+        Me.dgvRunners.TabIndex = 3
+        '
+        'txtName
+        '
+        Me.txtName.Enabled = False
+        Me.txtName.Location = New System.Drawing.Point(135, 73)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(267, 26)
+        Me.txtName.TabIndex = 4
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(135, 116)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(267, 26)
+        Me.TextBox2.TabIndex = 5
+        '
+        'btnEmailConditions
+        '
+        Me.btnEmailConditions.Location = New System.Drawing.Point(557, 102)
+        Me.btnEmailConditions.Name = "btnEmailConditions"
+        Me.btnEmailConditions.Size = New System.Drawing.Size(105, 62)
+        Me.btnEmailConditions.TabIndex = 6
+        Me.btnEmailConditions.Text = "Email Conditions"
+        Me.btnEmailConditions.UseVisualStyleBackColor = True
+        '
+        'frmViewRunner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(694, 327)
+        Me.ClientSize = New System.Drawing.Size(738, 587)
+        Me.Controls.Add(Me.btnEmailConditions)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.dgvRunners)
+        Me.Controls.Add(Me.btnOkay)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frmMainForm"
-        Me.Text = "Main Menu"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Controls.Add(Me.lblName)
+        Me.Name = "frmViewRunner"
+        Me.Text = "View Runner"
+        CType(Me.dgvRunners, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents toolstrpMenu As ToolStripMenuItem
-    Friend WithEvents menustrpbtnAddRunner As ToolStripMenuItem
-    Friend WithEvents menuitemRunnerForm As ToolStripMenuItem
-    Friend WithEvents menustrpViewInventory As ToolStripMenuItem
-    Friend WithEvents menustrpExit As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnOkay As Button
+    Friend WithEvents dgvRunners As DataGridView
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnEmailConditions As Button
 End Class
