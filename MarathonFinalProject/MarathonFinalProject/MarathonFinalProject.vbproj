@@ -72,10 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="ViewInventory.Designer.vb">
+      <DependentUpon>ViewInventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="ViewInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRunner.Designer.vb">
+      <DependentUpon>ViewRunner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRunner.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenu.vb">
@@ -108,8 +114,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="ViewInventory.resx">
+      <DependentUpon>ViewInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRunner.resx">
+      <DependentUpon>ViewRunner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
