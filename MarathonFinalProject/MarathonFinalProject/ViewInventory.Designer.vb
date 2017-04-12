@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ViewInventory
+Partial Class frmViewInventory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -131,6 +131,7 @@ Partial Class ViewInventory
         Me.txtboxWaterCount.ReadOnly = True
         Me.txtboxWaterCount.Size = New System.Drawing.Size(45, 26)
         Me.txtboxWaterCount.TabIndex = 8
+        Me.txtboxWaterCount.Tag = "1"
         Me.txtboxWaterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtboxSnackCount
@@ -141,6 +142,7 @@ Partial Class ViewInventory
         Me.txtboxSnackCount.ReadOnly = True
         Me.txtboxSnackCount.Size = New System.Drawing.Size(45, 26)
         Me.txtboxSnackCount.TabIndex = 9
+        Me.txtboxSnackCount.Tag = "2"
         Me.txtboxSnackCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txt5KMedalCount
@@ -151,6 +153,7 @@ Partial Class ViewInventory
         Me.txt5KMedalCount.ReadOnly = True
         Me.txt5KMedalCount.Size = New System.Drawing.Size(45, 26)
         Me.txt5KMedalCount.TabIndex = 10
+        Me.txt5KMedalCount.Tag = "3"
         Me.txt5KMedalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtbox10KMedalCount
@@ -161,6 +164,7 @@ Partial Class ViewInventory
         Me.txtbox10KMedalCount.ReadOnly = True
         Me.txtbox10KMedalCount.Size = New System.Drawing.Size(45, 26)
         Me.txtbox10KMedalCount.TabIndex = 11
+        Me.txtbox10KMedalCount.Tag = "4"
         Me.txtbox10KMedalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtXlargeShirtCount
@@ -170,6 +174,7 @@ Partial Class ViewInventory
         Me.txtXlargeShirtCount.Name = "txtXlargeShirtCount"
         Me.txtXlargeShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtXlargeShirtCount.TabIndex = 15
+        Me.txtXlargeShirtCount.Tag = "8"
         Me.txtXlargeShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtboxLargeShirtCount
@@ -179,6 +184,7 @@ Partial Class ViewInventory
         Me.txtboxLargeShirtCount.Name = "txtboxLargeShirtCount"
         Me.txtboxLargeShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxLargeShirtCount.TabIndex = 14
+        Me.txtboxLargeShirtCount.Tag = "7"
         Me.txtboxLargeShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtboxMediumShirtCount
@@ -188,6 +194,7 @@ Partial Class ViewInventory
         Me.txtboxMediumShirtCount.Name = "txtboxMediumShirtCount"
         Me.txtboxMediumShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxMediumShirtCount.TabIndex = 13
+        Me.txtboxMediumShirtCount.Tag = "6"
         Me.txtboxMediumShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtboxsmallShirtCount
@@ -197,6 +204,7 @@ Partial Class ViewInventory
         Me.txtboxsmallShirtCount.Name = "txtboxsmallShirtCount"
         Me.txtboxsmallShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxsmallShirtCount.TabIndex = 12
+        Me.txtboxsmallShirtCount.Tag = "5"
         Me.txtboxsmallShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chkboxWater
@@ -206,6 +214,7 @@ Partial Class ViewInventory
         Me.chkboxWater.Name = "chkboxWater"
         Me.chkboxWater.Size = New System.Drawing.Size(75, 24)
         Me.chkboxWater.TabIndex = 16
+        Me.chkboxWater.Tag = "1"
         Me.chkboxWater.Text = "Order"
         Me.chkboxWater.UseVisualStyleBackColor = True
         '
@@ -216,6 +225,7 @@ Partial Class ViewInventory
         Me.chkboxSnack.Name = "chkboxSnack"
         Me.chkboxSnack.Size = New System.Drawing.Size(75, 24)
         Me.chkboxSnack.TabIndex = 17
+        Me.chkboxSnack.Tag = "2"
         Me.chkboxSnack.Text = "Order"
         Me.chkboxSnack.UseVisualStyleBackColor = True
         '
@@ -226,16 +236,18 @@ Partial Class ViewInventory
         Me.chkbox5K.Name = "chkbox5K"
         Me.chkbox5K.Size = New System.Drawing.Size(75, 24)
         Me.chkbox5K.TabIndex = 18
+        Me.chkbox5K.Tag = "3"
         Me.chkbox5K.Text = "Order"
         Me.chkbox5K.UseVisualStyleBackColor = True
         '
         'chkbox10K
         '
         Me.chkbox10K.AutoSize = True
-        Me.chkbox10K.Location = New System.Drawing.Point(262, 233)
+        Me.chkbox10K.Location = New System.Drawing.Point(262, 236)
         Me.chkbox10K.Name = "chkbox10K"
         Me.chkbox10K.Size = New System.Drawing.Size(75, 24)
         Me.chkbox10K.TabIndex = 19
+        Me.chkbox10K.Tag = "4"
         Me.chkbox10K.Text = "Order"
         Me.chkbox10K.UseVisualStyleBackColor = True
         '
@@ -246,6 +258,7 @@ Partial Class ViewInventory
         Me.chkboxXShirt.Name = "chkboxXShirt"
         Me.chkboxXShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxXShirt.TabIndex = 23
+        Me.chkboxXShirt.Tag = "8"
         Me.chkboxXShirt.Text = "Order"
         Me.chkboxXShirt.UseVisualStyleBackColor = True
         '
@@ -256,6 +269,7 @@ Partial Class ViewInventory
         Me.chkboxLargeShirt.Name = "chkboxLargeShirt"
         Me.chkboxLargeShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxLargeShirt.TabIndex = 22
+        Me.chkboxLargeShirt.Tag = "7"
         Me.chkboxLargeShirt.Text = "Order"
         Me.chkboxLargeShirt.UseVisualStyleBackColor = True
         '
@@ -266,6 +280,7 @@ Partial Class ViewInventory
         Me.chkboxMedShirt.Name = "chkboxMedShirt"
         Me.chkboxMedShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxMedShirt.TabIndex = 21
+        Me.chkboxMedShirt.Tag = "6"
         Me.chkboxMedShirt.Text = "Order"
         Me.chkboxMedShirt.UseVisualStyleBackColor = True
         '
@@ -276,6 +291,7 @@ Partial Class ViewInventory
         Me.chkboxSmallshirt.Name = "chkboxSmallshirt"
         Me.chkboxSmallshirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxSmallshirt.TabIndex = 20
+        Me.chkboxSmallshirt.Tag = "5"
         Me.chkboxSmallshirt.Text = "Order"
         Me.chkboxSmallshirt.UseVisualStyleBackColor = True
         '
@@ -306,7 +322,7 @@ Partial Class ViewInventory
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'ViewInventory
+        'frmViewInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -338,7 +354,7 @@ Partial Class ViewInventory
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "ViewInventory"
+        Me.Name = "frmViewInventory"
         Me.Text = "View Inventory"
         Me.ResumeLayout(False)
         Me.PerformLayout()

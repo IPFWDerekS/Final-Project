@@ -18,9 +18,32 @@
         'where the user will see the amount Of the water, snacks, medals, And shirts.
 
 
+
+
     End Sub
 
     Private Sub VToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles menuitemRunnerForm.Click
+
+        frmViewRunner.ShowDialog()
+
+    End Sub
+
+    Private Sub menustrpbtnAddRunner_Click(sender As Object, e As EventArgs) Handles menustrpbtnAddRunner.Click
+
+        frmAddRunner.ShowDialog()
+
+
+    End Sub
+
+    Private Sub menustrpViewInventory_Click(sender As Object, e As EventArgs) Handles menustrpViewInventory.Click
+
+
+        frmViewInventory.ShowDialog()
+
+
+    End Sub
+
+    Private Sub menustrpExit_Click(sender As Object, e As EventArgs) Handles menustrpExit.Click
 
     End Sub
 End Class

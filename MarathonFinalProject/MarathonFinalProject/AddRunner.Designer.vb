@@ -37,15 +37,15 @@ Partial Class frmAddRunner
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.cboShirts = New System.Windows.Forms.ComboBox()
         Me.grpboxRaceType = New System.Windows.Forms.GroupBox()
-        Me.radbtn5K = New System.Windows.Forms.RadioButton()
         Me.radbtn10KRace = New System.Windows.Forms.RadioButton()
+        Me.radbtn5K = New System.Windows.Forms.RadioButton()
         Me.grpboxCorralNumber = New System.Windows.Forms.GroupBox()
-        Me.radbtnCorralA = New System.Windows.Forms.RadioButton()
-        Me.radbtnCorralB = New System.Windows.Forms.RadioButton()
         Me.radbtnCorralC = New System.Windows.Forms.RadioButton()
+        Me.radbtnCorralB = New System.Windows.Forms.RadioButton()
+        Me.radbtnCorralA = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.radbtn5KMedal = New System.Windows.Forms.RadioButton()
         Me.radbtn10KMedal = New System.Windows.Forms.RadioButton()
+        Me.radbtn5KMedal = New System.Windows.Forms.RadioButton()
         Me.txtdisplayWater = New System.Windows.Forms.TextBox()
         Me.txtDisplaySnack = New System.Windows.Forms.TextBox()
         Me.txtdisplay5K = New System.Windows.Forms.TextBox()
@@ -53,9 +53,13 @@ Partial Class frmAddRunner
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.txtdisplayShirts = New System.Windows.Forms.TextBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.StatusStrip = New System.Windows.Forms.ToolStripStatusLabel()
         Me.grpboxRaceType.SuspendLayout()
         Me.grpboxCorralNumber.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -187,17 +191,6 @@ Partial Class frmAddRunner
         Me.grpboxRaceType.TabStop = False
         Me.grpboxRaceType.Text = "Race Type:"
         '
-        'radbtn5K
-        '
-        Me.radbtn5K.AutoSize = True
-        Me.radbtn5K.Location = New System.Drawing.Point(47, 36)
-        Me.radbtn5K.Name = "radbtn5K"
-        Me.radbtn5K.Size = New System.Drawing.Size(95, 24)
-        Me.radbtn5K.TabIndex = 0
-        Me.radbtn5K.TabStop = True
-        Me.radbtn5K.Text = "5K Race"
-        Me.radbtn5K.UseVisualStyleBackColor = True
-        '
         'radbtn10KRace
         '
         Me.radbtn10KRace.AutoSize = True
@@ -208,6 +201,17 @@ Partial Class frmAddRunner
         Me.radbtn10KRace.TabStop = True
         Me.radbtn10KRace.Text = "10K Race"
         Me.radbtn10KRace.UseVisualStyleBackColor = True
+        '
+        'radbtn5K
+        '
+        Me.radbtn5K.AutoSize = True
+        Me.radbtn5K.Location = New System.Drawing.Point(47, 36)
+        Me.radbtn5K.Name = "radbtn5K"
+        Me.radbtn5K.Size = New System.Drawing.Size(95, 24)
+        Me.radbtn5K.TabIndex = 0
+        Me.radbtn5K.TabStop = True
+        Me.radbtn5K.Text = "5K Race"
+        Me.radbtn5K.UseVisualStyleBackColor = True
         '
         'grpboxCorralNumber
         '
@@ -221,16 +225,16 @@ Partial Class frmAddRunner
         Me.grpboxCorralNumber.TabStop = False
         Me.grpboxCorralNumber.Text = "Corral Number:"
         '
-        'radbtnCorralA
+        'radbtnCorralC
         '
-        Me.radbtnCorralA.AutoSize = True
-        Me.radbtnCorralA.Location = New System.Drawing.Point(23, 26)
-        Me.radbtnCorralA.Name = "radbtnCorralA"
-        Me.radbtnCorralA.Size = New System.Drawing.Size(91, 24)
-        Me.radbtnCorralA.TabIndex = 0
-        Me.radbtnCorralA.TabStop = True
-        Me.radbtnCorralA.Text = "Corral A"
-        Me.radbtnCorralA.UseVisualStyleBackColor = True
+        Me.radbtnCorralC.AutoSize = True
+        Me.radbtnCorralC.Location = New System.Drawing.Point(23, 94)
+        Me.radbtnCorralC.Name = "radbtnCorralC"
+        Me.radbtnCorralC.Size = New System.Drawing.Size(91, 24)
+        Me.radbtnCorralC.TabIndex = 2
+        Me.radbtnCorralC.TabStop = True
+        Me.radbtnCorralC.Text = "Corral C"
+        Me.radbtnCorralC.UseVisualStyleBackColor = True
         '
         'radbtnCorralB
         '
@@ -243,16 +247,16 @@ Partial Class frmAddRunner
         Me.radbtnCorralB.Text = "Corral B"
         Me.radbtnCorralB.UseVisualStyleBackColor = True
         '
-        'radbtnCorralC
+        'radbtnCorralA
         '
-        Me.radbtnCorralC.AutoSize = True
-        Me.radbtnCorralC.Location = New System.Drawing.Point(23, 94)
-        Me.radbtnCorralC.Name = "radbtnCorralC"
-        Me.radbtnCorralC.Size = New System.Drawing.Size(91, 24)
-        Me.radbtnCorralC.TabIndex = 2
-        Me.radbtnCorralC.TabStop = True
-        Me.radbtnCorralC.Text = "Corral C"
-        Me.radbtnCorralC.UseVisualStyleBackColor = True
+        Me.radbtnCorralA.AutoSize = True
+        Me.radbtnCorralA.Location = New System.Drawing.Point(23, 26)
+        Me.radbtnCorralA.Name = "radbtnCorralA"
+        Me.radbtnCorralA.Size = New System.Drawing.Size(91, 24)
+        Me.radbtnCorralA.TabIndex = 0
+        Me.radbtnCorralA.TabStop = True
+        Me.radbtnCorralA.Text = "Corral A"
+        Me.radbtnCorralA.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -265,17 +269,6 @@ Partial Class frmAddRunner
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "grpboxMedals"
         '
-        'radbtn5KMedal
-        '
-        Me.radbtn5KMedal.AutoSize = True
-        Me.radbtn5KMedal.Location = New System.Drawing.Point(27, 26)
-        Me.radbtn5KMedal.Name = "radbtn5KMedal"
-        Me.radbtn5KMedal.Size = New System.Drawing.Size(100, 24)
-        Me.radbtn5KMedal.TabIndex = 0
-        Me.radbtn5KMedal.TabStop = True
-        Me.radbtn5KMedal.Text = "5K Medal"
-        Me.radbtn5KMedal.UseVisualStyleBackColor = True
-        '
         'radbtn10KMedal
         '
         Me.radbtn10KMedal.AutoSize = True
@@ -287,6 +280,17 @@ Partial Class frmAddRunner
         Me.radbtn10KMedal.Text = "10K Medal"
         Me.radbtn10KMedal.UseVisualStyleBackColor = True
         '
+        'radbtn5KMedal
+        '
+        Me.radbtn5KMedal.AutoSize = True
+        Me.radbtn5KMedal.Location = New System.Drawing.Point(27, 26)
+        Me.radbtn5KMedal.Name = "radbtn5KMedal"
+        Me.radbtn5KMedal.Size = New System.Drawing.Size(100, 24)
+        Me.radbtn5KMedal.TabIndex = 0
+        Me.radbtn5KMedal.TabStop = True
+        Me.radbtn5KMedal.Text = "5K Medal"
+        Me.radbtn5KMedal.UseVisualStyleBackColor = True
+        '
         'txtdisplayWater
         '
         Me.txtdisplayWater.Enabled = False
@@ -294,6 +298,8 @@ Partial Class frmAddRunner
         Me.txtdisplayWater.Name = "txtdisplayWater"
         Me.txtdisplayWater.Size = New System.Drawing.Size(48, 26)
         Me.txtdisplayWater.TabIndex = 22
+        Me.txtdisplayWater.Tag = "Water Bottle"
+        Me.txtdisplayWater.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtDisplaySnack
         '
@@ -302,6 +308,8 @@ Partial Class frmAddRunner
         Me.txtDisplaySnack.Name = "txtDisplaySnack"
         Me.txtDisplaySnack.Size = New System.Drawing.Size(48, 26)
         Me.txtDisplaySnack.TabIndex = 23
+        Me.txtDisplaySnack.Tag = "Snack"
+        Me.txtDisplaySnack.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtdisplay5K
         '
@@ -310,6 +318,8 @@ Partial Class frmAddRunner
         Me.txtdisplay5K.Name = "txtdisplay5K"
         Me.txtdisplay5K.Size = New System.Drawing.Size(48, 26)
         Me.txtdisplay5K.TabIndex = 24
+        Me.txtdisplay5K.Tag = "5 K Medal"
+        Me.txtdisplay5K.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtdisplay10K
         '
@@ -318,6 +328,8 @@ Partial Class frmAddRunner
         Me.txtdisplay10K.Name = "txtdisplay10K"
         Me.txtdisplay10K.Size = New System.Drawing.Size(48, 26)
         Me.txtdisplay10K.TabIndex = 25
+        Me.txtdisplay10K.Tag = "10 K Medal"
+        Me.txtdisplay10K.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnSubmit
         '
@@ -346,11 +358,38 @@ Partial Class frmAddRunner
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'txtdisplayShirts
+        '
+        Me.txtdisplayShirts.Enabled = False
+        Me.txtdisplayShirts.Location = New System.Drawing.Point(38, 190)
+        Me.txtdisplayShirts.Name = "txtdisplayShirts"
+        Me.txtdisplayShirts.Size = New System.Drawing.Size(65, 26)
+        Me.txtdisplayShirts.TabIndex = 29
+        Me.txtdisplayShirts.Text = "Shirt"
+        Me.txtdisplayShirts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusStrip})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 662)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(779, 22)
+        Me.StatusStrip1.TabIndex = 30
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'StatusStrip
+        '
+        Me.StatusStrip.Name = "StatusStrip"
+        Me.StatusStrip.Size = New System.Drawing.Size(0, 17)
+        '
         'frmAddRunner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(779, 684)
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.txtdisplayShirts)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSubmit)
@@ -383,6 +422,8 @@ Partial Class frmAddRunner
         Me.grpboxCorralNumber.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -419,4 +460,7 @@ Partial Class frmAddRunner
     Friend WithEvents btnSubmit As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents txtdisplayShirts As TextBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents StatusStrip As ToolStripStatusLabel
 End Class
