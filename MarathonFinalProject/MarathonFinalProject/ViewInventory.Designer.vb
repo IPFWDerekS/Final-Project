@@ -30,14 +30,14 @@ Partial Class ViewInventory
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtboxWaterCount = New System.Windows.Forms.TextBox()
+        Me.txtboxSnackCount = New System.Windows.Forms.TextBox()
+        Me.txt5KMedalCount = New System.Windows.Forms.TextBox()
+        Me.txtbox10KMedalCount = New System.Windows.Forms.TextBox()
+        Me.txtXlargeShirtCount = New System.Windows.Forms.TextBox()
+        Me.txtboxLargeShirtCount = New System.Windows.Forms.TextBox()
+        Me.txtboxMediumShirtCount = New System.Windows.Forms.TextBox()
+        Me.txtboxsmallShirtCount = New System.Windows.Forms.TextBox()
         Me.chkboxWater = New System.Windows.Forms.CheckBox()
         Me.chkboxSnack = New System.Windows.Forms.CheckBox()
         Me.chkbox5K = New System.Windows.Forms.CheckBox()
@@ -92,9 +92,9 @@ Partial Class ViewInventory
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(398, 107)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(163, 20)
+        Me.Label5.Size = New System.Drawing.Size(153, 20)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Medium Medal Count:"
+        Me.Label5.Text = "Medium Shirt Count:"
         '
         'Label6
         '
@@ -110,82 +110,94 @@ Partial Class ViewInventory
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(413, 170)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(148, 20)
+        Me.Label7.Size = New System.Drawing.Size(138, 20)
         Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Large Medal Count:"
+        Me.Label7.Text = "Large Shirt Count:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(397, 233)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(164, 20)
+        Me.Label8.Size = New System.Drawing.Size(154, 20)
         Me.Label8.TabIndex = 7
-        Me.Label8.Text = "X-Large Medal Count:"
+        Me.Label8.Text = "X-Large Shirt Count:"
         '
-        'TextBox1
+        'txtboxWaterCount
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(183, 49)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox1.TabIndex = 8
+        Me.txtboxWaterCount.Enabled = False
+        Me.txtboxWaterCount.Location = New System.Drawing.Point(211, 49)
+        Me.txtboxWaterCount.Name = "txtboxWaterCount"
+        Me.txtboxWaterCount.ReadOnly = True
+        Me.txtboxWaterCount.Size = New System.Drawing.Size(45, 26)
+        Me.txtboxWaterCount.TabIndex = 8
+        Me.txtboxWaterCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox2
+        'txtboxSnackCount
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(183, 110)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox2.TabIndex = 9
+        Me.txtboxSnackCount.Enabled = False
+        Me.txtboxSnackCount.Location = New System.Drawing.Point(211, 110)
+        Me.txtboxSnackCount.Name = "txtboxSnackCount"
+        Me.txtboxSnackCount.ReadOnly = True
+        Me.txtboxSnackCount.Size = New System.Drawing.Size(45, 26)
+        Me.txtboxSnackCount.TabIndex = 9
+        Me.txtboxSnackCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox3
+        'txt5KMedalCount
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(183, 170)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox3.TabIndex = 10
+        Me.txt5KMedalCount.Enabled = False
+        Me.txt5KMedalCount.Location = New System.Drawing.Point(211, 170)
+        Me.txt5KMedalCount.Name = "txt5KMedalCount"
+        Me.txt5KMedalCount.ReadOnly = True
+        Me.txt5KMedalCount.Size = New System.Drawing.Size(45, 26)
+        Me.txt5KMedalCount.TabIndex = 10
+        Me.txt5KMedalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox4
+        'txtbox10KMedalCount
         '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(183, 233)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox4.TabIndex = 11
+        Me.txtbox10KMedalCount.Enabled = False
+        Me.txtbox10KMedalCount.Location = New System.Drawing.Point(211, 233)
+        Me.txtbox10KMedalCount.Name = "txtbox10KMedalCount"
+        Me.txtbox10KMedalCount.ReadOnly = True
+        Me.txtbox10KMedalCount.Size = New System.Drawing.Size(45, 26)
+        Me.txtbox10KMedalCount.TabIndex = 11
+        Me.txtbox10KMedalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox5
+        'txtXlargeShirtCount
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(567, 233)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox5.TabIndex = 15
+        Me.txtXlargeShirtCount.Enabled = False
+        Me.txtXlargeShirtCount.Location = New System.Drawing.Point(555, 233)
+        Me.txtXlargeShirtCount.Name = "txtXlargeShirtCount"
+        Me.txtXlargeShirtCount.Size = New System.Drawing.Size(44, 26)
+        Me.txtXlargeShirtCount.TabIndex = 15
+        Me.txtXlargeShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox6
+        'txtboxLargeShirtCount
         '
-        Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(567, 170)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox6.TabIndex = 14
+        Me.txtboxLargeShirtCount.Enabled = False
+        Me.txtboxLargeShirtCount.Location = New System.Drawing.Point(555, 170)
+        Me.txtboxLargeShirtCount.Name = "txtboxLargeShirtCount"
+        Me.txtboxLargeShirtCount.Size = New System.Drawing.Size(44, 26)
+        Me.txtboxLargeShirtCount.TabIndex = 14
+        Me.txtboxLargeShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox7
+        'txtboxMediumShirtCount
         '
-        Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(567, 110)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox7.TabIndex = 13
+        Me.txtboxMediumShirtCount.Enabled = False
+        Me.txtboxMediumShirtCount.Location = New System.Drawing.Point(555, 110)
+        Me.txtboxMediumShirtCount.Name = "txtboxMediumShirtCount"
+        Me.txtboxMediumShirtCount.Size = New System.Drawing.Size(44, 26)
+        Me.txtboxMediumShirtCount.TabIndex = 13
+        Me.txtboxMediumShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'TextBox8
+        'txtboxsmallShirtCount
         '
-        Me.TextBox8.Enabled = False
-        Me.TextBox8.Location = New System.Drawing.Point(567, 49)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(73, 26)
-        Me.TextBox8.TabIndex = 12
+        Me.txtboxsmallShirtCount.Enabled = False
+        Me.txtboxsmallShirtCount.Location = New System.Drawing.Point(555, 49)
+        Me.txtboxsmallShirtCount.Name = "txtboxsmallShirtCount"
+        Me.txtboxsmallShirtCount.Size = New System.Drawing.Size(44, 26)
+        Me.txtboxsmallShirtCount.TabIndex = 12
+        Me.txtboxsmallShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'chkboxWater
         '
@@ -230,7 +242,7 @@ Partial Class ViewInventory
         'chkboxXShirt
         '
         Me.chkboxXShirt.AutoSize = True
-        Me.chkboxXShirt.Location = New System.Drawing.Point(646, 234)
+        Me.chkboxXShirt.Location = New System.Drawing.Point(605, 234)
         Me.chkboxXShirt.Name = "chkboxXShirt"
         Me.chkboxXShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxXShirt.TabIndex = 23
@@ -240,7 +252,7 @@ Partial Class ViewInventory
         'chkboxLargeShirt
         '
         Me.chkboxLargeShirt.AutoSize = True
-        Me.chkboxLargeShirt.Location = New System.Drawing.Point(646, 171)
+        Me.chkboxLargeShirt.Location = New System.Drawing.Point(605, 171)
         Me.chkboxLargeShirt.Name = "chkboxLargeShirt"
         Me.chkboxLargeShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxLargeShirt.TabIndex = 22
@@ -250,7 +262,7 @@ Partial Class ViewInventory
         'chkboxMedShirt
         '
         Me.chkboxMedShirt.AutoSize = True
-        Me.chkboxMedShirt.Location = New System.Drawing.Point(646, 113)
+        Me.chkboxMedShirt.Location = New System.Drawing.Point(605, 113)
         Me.chkboxMedShirt.Name = "chkboxMedShirt"
         Me.chkboxMedShirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxMedShirt.TabIndex = 21
@@ -260,7 +272,7 @@ Partial Class ViewInventory
         'chkboxSmallshirt
         '
         Me.chkboxSmallshirt.AutoSize = True
-        Me.chkboxSmallshirt.Location = New System.Drawing.Point(646, 52)
+        Me.chkboxSmallshirt.Location = New System.Drawing.Point(605, 52)
         Me.chkboxSmallshirt.Name = "chkboxSmallshirt"
         Me.chkboxSmallshirt.Size = New System.Drawing.Size(75, 24)
         Me.chkboxSmallshirt.TabIndex = 20
@@ -310,14 +322,14 @@ Partial Class ViewInventory
         Me.Controls.Add(Me.chkbox5K)
         Me.Controls.Add(Me.chkboxSnack)
         Me.Controls.Add(Me.chkboxWater)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtXlargeShirtCount)
+        Me.Controls.Add(Me.txtboxLargeShirtCount)
+        Me.Controls.Add(Me.txtboxMediumShirtCount)
+        Me.Controls.Add(Me.txtboxsmallShirtCount)
+        Me.Controls.Add(Me.txtbox10KMedalCount)
+        Me.Controls.Add(Me.txt5KMedalCount)
+        Me.Controls.Add(Me.txtboxSnackCount)
+        Me.Controls.Add(Me.txtboxWaterCount)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -341,14 +353,14 @@ Partial Class ViewInventory
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtboxWaterCount As TextBox
+    Friend WithEvents txtboxSnackCount As TextBox
+    Friend WithEvents txt5KMedalCount As TextBox
+    Friend WithEvents txtbox10KMedalCount As TextBox
+    Friend WithEvents txtXlargeShirtCount As TextBox
+    Friend WithEvents txtboxLargeShirtCount As TextBox
+    Friend WithEvents txtboxMediumShirtCount As TextBox
+    Friend WithEvents txtboxsmallShirtCount As TextBox
     Friend WithEvents chkboxWater As CheckBox
     Friend WithEvents chkboxSnack As CheckBox
     Friend WithEvents chkbox5K As CheckBox

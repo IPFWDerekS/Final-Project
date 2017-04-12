@@ -1,21 +1,21 @@
 ﻿Module GlobalModule
 
     'The inventory count
-    Dim smallShirt As Integer
+    Public smallShirt As Integer = 15
 
-    Dim mediumShirt As Integer
+    Public mediumShirt As Integer = 14
 
-    Dim largeShirt As Integer
+    Public largeShirt As Integer = 25
 
-    Dim xlargeShirt As Integer
+    Public xlargeShirt As Integer = 20
 
-    Dim waterBottle As Integer
+    Public waterBottle As Integer = 16
 
-    Dim snack As Integer
+    Public snack As Integer = 16
 
-    Dim fiveKMedal As Integer
+    Public fiveKMedal As Integer = 22
 
-    Dim tenKMedal As Integer
+    Public tenKMedal As Integer = 13
 
 
 
