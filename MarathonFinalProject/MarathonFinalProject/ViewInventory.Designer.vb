@@ -38,14 +38,7 @@ Partial Class frmViewInventory
         Me.txtboxLargeShirtCount = New System.Windows.Forms.TextBox()
         Me.txtboxMediumShirtCount = New System.Windows.Forms.TextBox()
         Me.txtboxsmallShirtCount = New System.Windows.Forms.TextBox()
-        Me.chkboxWater = New System.Windows.Forms.CheckBox()
-        Me.chkboxSnack = New System.Windows.Forms.CheckBox()
-        Me.chkbox5K = New System.Windows.Forms.CheckBox()
-        Me.chkbox10K = New System.Windows.Forms.CheckBox()
-        Me.chkboxXShirt = New System.Windows.Forms.CheckBox()
-        Me.chkboxLargeShirt = New System.Windows.Forms.CheckBox()
-        Me.chkboxMedShirt = New System.Windows.Forms.CheckBox()
-        Me.chkboxSmallshirt = New System.Windows.Forms.CheckBox()
+        Me.chkboxOrder = New System.Windows.Forms.CheckBox()
         Me.btnSubmit = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
@@ -90,7 +83,7 @@ Partial Class frmViewInventory
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(398, 107)
+        Me.Label5.Location = New System.Drawing.Point(297, 110)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(153, 20)
         Me.Label5.TabIndex = 4
@@ -99,7 +92,7 @@ Partial Class frmViewInventory
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(425, 49)
+        Me.Label6.Location = New System.Drawing.Point(324, 52)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(136, 20)
         Me.Label6.TabIndex = 5
@@ -108,7 +101,7 @@ Partial Class frmViewInventory
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(413, 170)
+        Me.Label7.Location = New System.Drawing.Point(312, 173)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(138, 20)
         Me.Label7.TabIndex = 6
@@ -117,7 +110,7 @@ Partial Class frmViewInventory
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(397, 233)
+        Me.Label8.Location = New System.Drawing.Point(296, 236)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(154, 20)
         Me.Label8.TabIndex = 7
@@ -170,7 +163,7 @@ Partial Class frmViewInventory
         'txtXlargeShirtCount
         '
         Me.txtXlargeShirtCount.Enabled = False
-        Me.txtXlargeShirtCount.Location = New System.Drawing.Point(555, 233)
+        Me.txtXlargeShirtCount.Location = New System.Drawing.Point(454, 236)
         Me.txtXlargeShirtCount.Name = "txtXlargeShirtCount"
         Me.txtXlargeShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtXlargeShirtCount.TabIndex = 15
@@ -180,7 +173,7 @@ Partial Class frmViewInventory
         'txtboxLargeShirtCount
         '
         Me.txtboxLargeShirtCount.Enabled = False
-        Me.txtboxLargeShirtCount.Location = New System.Drawing.Point(555, 170)
+        Me.txtboxLargeShirtCount.Location = New System.Drawing.Point(454, 173)
         Me.txtboxLargeShirtCount.Name = "txtboxLargeShirtCount"
         Me.txtboxLargeShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxLargeShirtCount.TabIndex = 14
@@ -190,7 +183,7 @@ Partial Class frmViewInventory
         'txtboxMediumShirtCount
         '
         Me.txtboxMediumShirtCount.Enabled = False
-        Me.txtboxMediumShirtCount.Location = New System.Drawing.Point(555, 110)
+        Me.txtboxMediumShirtCount.Location = New System.Drawing.Point(454, 113)
         Me.txtboxMediumShirtCount.Name = "txtboxMediumShirtCount"
         Me.txtboxMediumShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxMediumShirtCount.TabIndex = 13
@@ -200,104 +193,27 @@ Partial Class frmViewInventory
         'txtboxsmallShirtCount
         '
         Me.txtboxsmallShirtCount.Enabled = False
-        Me.txtboxsmallShirtCount.Location = New System.Drawing.Point(555, 49)
+        Me.txtboxsmallShirtCount.Location = New System.Drawing.Point(454, 52)
         Me.txtboxsmallShirtCount.Name = "txtboxsmallShirtCount"
         Me.txtboxsmallShirtCount.Size = New System.Drawing.Size(44, 26)
         Me.txtboxsmallShirtCount.TabIndex = 12
         Me.txtboxsmallShirtCount.Tag = "5"
         Me.txtboxsmallShirtCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'chkboxWater
+        'chkboxOrder
         '
-        Me.chkboxWater.AutoSize = True
-        Me.chkboxWater.Location = New System.Drawing.Point(262, 51)
-        Me.chkboxWater.Name = "chkboxWater"
-        Me.chkboxWater.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxWater.TabIndex = 16
-        Me.chkboxWater.Tag = "1"
-        Me.chkboxWater.Text = "Order"
-        Me.chkboxWater.UseVisualStyleBackColor = True
-        '
-        'chkboxSnack
-        '
-        Me.chkboxSnack.AutoSize = True
-        Me.chkboxSnack.Location = New System.Drawing.Point(262, 112)
-        Me.chkboxSnack.Name = "chkboxSnack"
-        Me.chkboxSnack.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxSnack.TabIndex = 17
-        Me.chkboxSnack.Tag = "2"
-        Me.chkboxSnack.Text = "Order"
-        Me.chkboxSnack.UseVisualStyleBackColor = True
-        '
-        'chkbox5K
-        '
-        Me.chkbox5K.AutoSize = True
-        Me.chkbox5K.Location = New System.Drawing.Point(262, 170)
-        Me.chkbox5K.Name = "chkbox5K"
-        Me.chkbox5K.Size = New System.Drawing.Size(75, 24)
-        Me.chkbox5K.TabIndex = 18
-        Me.chkbox5K.Tag = "3"
-        Me.chkbox5K.Text = "Order"
-        Me.chkbox5K.UseVisualStyleBackColor = True
-        '
-        'chkbox10K
-        '
-        Me.chkbox10K.AutoSize = True
-        Me.chkbox10K.Location = New System.Drawing.Point(262, 236)
-        Me.chkbox10K.Name = "chkbox10K"
-        Me.chkbox10K.Size = New System.Drawing.Size(75, 24)
-        Me.chkbox10K.TabIndex = 19
-        Me.chkbox10K.Tag = "4"
-        Me.chkbox10K.Text = "Order"
-        Me.chkbox10K.UseVisualStyleBackColor = True
-        '
-        'chkboxXShirt
-        '
-        Me.chkboxXShirt.AutoSize = True
-        Me.chkboxXShirt.Location = New System.Drawing.Point(605, 234)
-        Me.chkboxXShirt.Name = "chkboxXShirt"
-        Me.chkboxXShirt.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxXShirt.TabIndex = 23
-        Me.chkboxXShirt.Tag = "8"
-        Me.chkboxXShirt.Text = "Order"
-        Me.chkboxXShirt.UseVisualStyleBackColor = True
-        '
-        'chkboxLargeShirt
-        '
-        Me.chkboxLargeShirt.AutoSize = True
-        Me.chkboxLargeShirt.Location = New System.Drawing.Point(605, 171)
-        Me.chkboxLargeShirt.Name = "chkboxLargeShirt"
-        Me.chkboxLargeShirt.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxLargeShirt.TabIndex = 22
-        Me.chkboxLargeShirt.Tag = "7"
-        Me.chkboxLargeShirt.Text = "Order"
-        Me.chkboxLargeShirt.UseVisualStyleBackColor = True
-        '
-        'chkboxMedShirt
-        '
-        Me.chkboxMedShirt.AutoSize = True
-        Me.chkboxMedShirt.Location = New System.Drawing.Point(605, 113)
-        Me.chkboxMedShirt.Name = "chkboxMedShirt"
-        Me.chkboxMedShirt.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxMedShirt.TabIndex = 21
-        Me.chkboxMedShirt.Tag = "6"
-        Me.chkboxMedShirt.Text = "Order"
-        Me.chkboxMedShirt.UseVisualStyleBackColor = True
-        '
-        'chkboxSmallshirt
-        '
-        Me.chkboxSmallshirt.AutoSize = True
-        Me.chkboxSmallshirt.Location = New System.Drawing.Point(605, 52)
-        Me.chkboxSmallshirt.Name = "chkboxSmallshirt"
-        Me.chkboxSmallshirt.Size = New System.Drawing.Size(75, 24)
-        Me.chkboxSmallshirt.TabIndex = 20
-        Me.chkboxSmallshirt.Tag = "5"
-        Me.chkboxSmallshirt.Text = "Order"
-        Me.chkboxSmallshirt.UseVisualStyleBackColor = True
+        Me.chkboxOrder.AutoSize = True
+        Me.chkboxOrder.Location = New System.Drawing.Point(245, 12)
+        Me.chkboxOrder.Name = "chkboxOrder"
+        Me.chkboxOrder.Size = New System.Drawing.Size(75, 24)
+        Me.chkboxOrder.TabIndex = 16
+        Me.chkboxOrder.Tag = "1"
+        Me.chkboxOrder.Text = "Order"
+        Me.chkboxOrder.UseVisualStyleBackColor = True
         '
         'btnSubmit
         '
-        Me.btnSubmit.Location = New System.Drawing.Point(156, 292)
+        Me.btnSubmit.Location = New System.Drawing.Point(156, 337)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(100, 40)
         Me.btnSubmit.TabIndex = 24
@@ -306,7 +222,7 @@ Partial Class frmViewInventory
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(328, 292)
+        Me.btnClear.Location = New System.Drawing.Point(316, 337)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(100, 40)
         Me.btnClear.TabIndex = 25
@@ -315,7 +231,7 @@ Partial Class frmViewInventory
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(499, 292)
+        Me.btnExit.Location = New System.Drawing.Point(474, 337)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(100, 40)
         Me.btnExit.TabIndex = 26
@@ -326,18 +242,11 @@ Partial Class frmViewInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(802, 363)
+        Me.ClientSize = New System.Drawing.Size(690, 417)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSubmit)
-        Me.Controls.Add(Me.chkboxXShirt)
-        Me.Controls.Add(Me.chkboxLargeShirt)
-        Me.Controls.Add(Me.chkboxMedShirt)
-        Me.Controls.Add(Me.chkboxSmallshirt)
-        Me.Controls.Add(Me.chkbox10K)
-        Me.Controls.Add(Me.chkbox5K)
-        Me.Controls.Add(Me.chkboxSnack)
-        Me.Controls.Add(Me.chkboxWater)
+        Me.Controls.Add(Me.chkboxOrder)
         Me.Controls.Add(Me.txtXlargeShirtCount)
         Me.Controls.Add(Me.txtboxLargeShirtCount)
         Me.Controls.Add(Me.txtboxMediumShirtCount)
@@ -377,14 +286,7 @@ Partial Class frmViewInventory
     Friend WithEvents txtboxLargeShirtCount As TextBox
     Friend WithEvents txtboxMediumShirtCount As TextBox
     Friend WithEvents txtboxsmallShirtCount As TextBox
-    Friend WithEvents chkboxWater As CheckBox
-    Friend WithEvents chkboxSnack As CheckBox
-    Friend WithEvents chkbox5K As CheckBox
-    Friend WithEvents chkbox10K As CheckBox
-    Friend WithEvents chkboxXShirt As CheckBox
-    Friend WithEvents chkboxLargeShirt As CheckBox
-    Friend WithEvents chkboxMedShirt As CheckBox
-    Friend WithEvents chkboxSmallshirt As CheckBox
+    Friend WithEvents chkboxOrder As CheckBox
     Friend WithEvents btnSubmit As Button
     Friend WithEvents btnClear As Button
     Friend WithEvents btnExit As Button

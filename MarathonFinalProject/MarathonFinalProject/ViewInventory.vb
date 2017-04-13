@@ -45,57 +45,103 @@
 
 
 
+        If chkboxOrder.Checked Then
 
-        For i As Integer = Controls.Count - 1 To 0 Step -1
-
-            If TypeOf Controls(i) Is TextBox Then
-
-                Dim textbox As TextBox = CType(Me.Controls(i), TextBox)
-
-          
-
-                Dim value As Integer = 10
+            For i As Integer = Controls.Count - 1 To 0 Step -1
 
 
-                If TypeOf Controls(i) Is CheckBox Then
+                If TypeOf Controls(i) Is TextBox Then
 
-                    Dim checkbox As CheckBox = CType(Me.Controls(i), CheckBox)
+                    Dim textbox As TextBox = CType(Me.Controls(i), TextBox)
 
-                    If checkbox.Checked Then
+                    Dim value As Integer = 10
+                    Dim newvalue As String
 
-                        For a As Integer = Controls.Count - 1 To 0 Step -1
 
-                        Next
+                    If CInt(textbox.Text) < value Then
+
+                        newvalue = (CInt(textbox.Text) + value)
+
+                        textbox.Text = newvalue
+
 
 
                     End If
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 End If
 
 
 
-
-                End If
-
-
-            'Dim value As Integer = 10
-
-            'If CheckBox.Checked Then
-
-            '    If CInt(TextBox.Text) < value Then
-
-            '        If CheckBox.Tag = TextBox.Tag Then
+            Next
 
 
-            '            MessageBox.Show("Yeah!")
 
-            '        End If
+        End If
 
-            '    End If
+        'For i As Integer = Controls.Count - 1 To 0 Step -1
 
-            'End If
+        '    If TypeOf Controls(i) Is TextBox Then
+
+        '        Dim textbox As TextBox = CType(Me.Controls(i), TextBox)
 
 
-        Next
+
+        '        Dim value As Integer = 10
+
+
+        '        If TypeOf Controls(i) Is CheckBox Then
+
+        '            Dim checkbox As CheckBox = CType(Me.Controls(i), CheckBox)
+
+        '            If checkbox.Checked Then
+
+        '                For a As Integer = Controls.Count - 1 To 0 Step -1
+
+        '                Next
+
+
+        '            End If
+        '        End If
+
+
+
+
+        '        End If
+
+
+        'Dim value As Integer = 10
+
+        'If CheckBox.Checked Then
+
+        '    If CInt(TextBox.Text) < value Then
+
+        '        If CheckBox.Tag = TextBox.Tag Then
+
+
+        '            MessageBox.Show("Yeah!")
+
+        '        End If
+
+        '    End If
+
+        'End If
+        'Next
+
+
+
 
         'For i As Integer = Controls.Count - 1 To 0 Step -1
         '    Dim cbo As ComboBox = CType(GroupBox1.Controls(i), ComboBox)
