@@ -22,6 +22,7 @@ Partial Class frmAddRunner
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -56,10 +57,12 @@ Partial Class frmAddRunner
         Me.txtdisplayShirts = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusStrip = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.grpboxRaceType.SuspendLayout()
         Me.grpboxCorralNumber.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -140,6 +143,7 @@ Partial Class frmAddRunner
         Me.txtBibnumber.Name = "txtBibnumber"
         Me.txtBibnumber.Size = New System.Drawing.Size(147, 26)
         Me.txtBibnumber.TabIndex = 13
+        Me.txtBibnumber.Tag = "Bib Number"
         '
         'txtFirst
         '
@@ -147,6 +151,7 @@ Partial Class frmAddRunner
         Me.txtFirst.Name = "txtFirst"
         Me.txtFirst.Size = New System.Drawing.Size(253, 26)
         Me.txtFirst.TabIndex = 14
+        Me.txtFirst.Tag = "First Name"
         '
         'txtLast
         '
@@ -154,6 +159,7 @@ Partial Class frmAddRunner
         Me.txtLast.Name = "txtLast"
         Me.txtLast.Size = New System.Drawing.Size(253, 26)
         Me.txtLast.TabIndex = 15
+        Me.txtLast.Tag = "Last Name"
         '
         'Label5
         '
@@ -170,6 +176,7 @@ Partial Class frmAddRunner
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(76, 26)
         Me.TextBox1.TabIndex = 17
+        Me.TextBox1.Tag = "Age"
         '
         'cboShirts
         '
@@ -179,6 +186,7 @@ Partial Class frmAddRunner
         Me.cboShirts.Name = "cboShirts"
         Me.cboShirts.Size = New System.Drawing.Size(121, 28)
         Me.cboShirts.TabIndex = 18
+        Me.cboShirts.Tag = "Shirt Size"
         '
         'grpboxRaceType
         '
@@ -189,6 +197,7 @@ Partial Class frmAddRunner
         Me.grpboxRaceType.Size = New System.Drawing.Size(247, 124)
         Me.grpboxRaceType.TabIndex = 19
         Me.grpboxRaceType.TabStop = False
+        Me.grpboxRaceType.Tag = "Race Type"
         Me.grpboxRaceType.Text = "Race Type:"
         '
         'radbtn10KRace
@@ -223,6 +232,7 @@ Partial Class frmAddRunner
         Me.grpboxCorralNumber.Size = New System.Drawing.Size(184, 124)
         Me.grpboxCorralNumber.TabIndex = 20
         Me.grpboxCorralNumber.TabStop = False
+        Me.grpboxCorralNumber.Tag = "Corral Number"
         Me.grpboxCorralNumber.Text = "Corral Number:"
         '
         'radbtnCorralC
@@ -267,6 +277,7 @@ Partial Class frmAddRunner
         Me.GroupBox1.Size = New System.Drawing.Size(200, 118)
         Me.GroupBox1.TabIndex = 21
         Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Tag = "Medal"
         Me.GroupBox1.Text = "grpboxMedals"
         '
         'radbtn10KMedal
@@ -383,6 +394,10 @@ Partial Class frmAddRunner
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(0, 17)
         '
+        'errProvider
+        '
+        Me.errProvider.ContainerControl = Me
+        '
         'frmAddRunner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -424,6 +439,7 @@ Partial Class frmAddRunner
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.errProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -463,4 +479,5 @@ Partial Class frmAddRunner
     Friend WithEvents txtdisplayShirts As TextBox
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents StatusStrip As ToolStripStatusLabel
+    Friend WithEvents errProvider As ErrorProvider
 End Class

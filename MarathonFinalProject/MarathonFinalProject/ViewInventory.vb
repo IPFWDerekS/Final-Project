@@ -23,27 +23,29 @@
         ItemDictionary.Add(7, 25)
         ItemDictionary.Add(8, 20)
 
-        txtboxWaterCount.Text = ItemDictionary.Item(1)
 
-        txtboxSnackCount.Text = ItemDictionary.Item(2)
 
-        txt5KMedalCount.Text = ItemDictionary.Item(3)
+        txtboxWaterCount.Text = waterBottle
 
-        txtbox10KMedalCount.Text = ItemDictionary.Item(4)
+        txtboxSnackCount.Text = snack
 
-        txtboxsmallShirtCount.Text = ItemDictionary.Item(5)
+        txt5KMedalCount.Text = fiveKMedal
 
-        txtboxMediumShirtCount.Text = ItemDictionary.Item(6)
+        txtbox10KMedalCount.Text = tenKMedal
 
-        txtboxLargeShirtCount.Text = ItemDictionary.Item(7)
+        txtboxsmallShirtCount.Text = smallShirt
 
-        txtXlargeShirtCount.Text = ItemDictionary.Item(8)
+        txtboxMediumShirtCount.Text = mediumShirt
+
+        txtboxLargeShirtCount.Text = largeShirt
+
+        txtXlargeShirtCount.Text = xlargeShirt
 
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
-
+        errProvider1.Clear()
 
         If chkboxOrder.Checked Then
 
@@ -64,22 +66,11 @@
 
                         textbox.Text = newvalue
 
+                    Else
+                        StatusLabel.Text = "Inventory are sufficient."
 
 
                     End If
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 End If
 
@@ -87,83 +78,18 @@
 
             Next
 
+        Else
+
+            errProvider1.SetError(chkboxOrder, chkboxOrder.Tag & " is not checked.")
+
+            chkboxOrder.Focus()
+
+
+            Return
 
 
         End If
 
-        'For i As Integer = Controls.Count - 1 To 0 Step -1
-
-        '    If TypeOf Controls(i) Is TextBox Then
-
-        '        Dim textbox As TextBox = CType(Me.Controls(i), TextBox)
-
-
-
-        '        Dim value As Integer = 10
-
-
-        '        If TypeOf Controls(i) Is CheckBox Then
-
-        '            Dim checkbox As CheckBox = CType(Me.Controls(i), CheckBox)
-
-        '            If checkbox.Checked Then
-
-        '                For a As Integer = Controls.Count - 1 To 0 Step -1
-
-        '                Next
-
-
-        '            End If
-        '        End If
-
-
-
-
-        '        End If
-
-
-        'Dim value As Integer = 10
-
-        'If CheckBox.Checked Then
-
-        '    If CInt(TextBox.Text) < value Then
-
-        '        If CheckBox.Tag = TextBox.Tag Then
-
-
-        '            MessageBox.Show("Yeah!")
-
-        '        End If
-
-        '    End If
-
-        'End If
-        'Next
-
-
-
-
-        'For i As Integer = Controls.Count - 1 To 0 Step -1
-        '    Dim cbo As ComboBox = CType(GroupBox1.Controls(i), ComboBox)
-
-
-
-        '    If cboCourseNumber.SelectedIndex = -1 Then
-
-        '        errProvider.SetError(cboCourseNumber, "Course Number is not selected.")
-
-        '    End If
-
-        '    If cboGrade.SelectedIndex = -1 Then
-
-
-        '        errProvider.SetError(cboGrade, "Grade is not selected.")
-
-        '    End If
-
-
-
-        'Next
 
     End Sub
 End Class

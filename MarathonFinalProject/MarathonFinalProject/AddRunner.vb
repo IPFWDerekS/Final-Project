@@ -68,33 +68,97 @@ Public Class frmAddRunner
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
+        errProvider.Clear()
+
+        'waterBottle += -1
+
+        'snack += -1
+
+        'If radbtn5KMedal.Checked Then
+
+        '    fiveKMedal += -1
+
+        'ElseIf radbtn10KMedal.Checked Then
+
+        '    tenKMedal += -1
+
+        'Else
 
 
+
+        'End If
 
 
         For i As Integer = Controls.Count - 1 To 0 Step -1
 
+            If TypeOf Controls(i) Is ComboBox Then
+
+
+                Dim cbobox As ComboBox = CType(Controls(i), ComboBox)
+
+                If cbobox.SelectedIndex = -1 Then
+
+
+                    errProvider.SetError(cbobox, cbobox.Tag.ToString & " is not selected.")
+
+                    cbobox.Focus()
+
+                    Return
+
+                End If
+
+
+            End If
+            'If a control is a listbox.
             If TypeOf Controls(i) Is TextBox Then
 
-                Dim textbox As TextBox = CType(Me.Controls(i), TextBox)
 
-                If textbox.Enabled = False Then
+                Dim textbox As TextBox = CType(Controls(i), TextBox)
+
+                If textbox.Enabled Then
+
+                    If textbox.Text = "" Then
+
+                        errProvider.SetError(textbox, textbox.Tag.ToString & " is not selected.")
+
+                        textbox.Focus()
+                        Return
 
 
-                    MessageBox.Show(textbox.Tag.ToString)
+                    End If
 
 
                 End If
-                    'If value < 10 Then
-
-                    '    StatusStrip.Text = textbox.Name & " is running low. Please goo and order more."
-
-                    'End If
 
                 End If
+
+
+
+
 
 
         Next
+
+
+        waterBottle -= -1
+
+        snack -= -1
+
+        If radbtn5KMedal.Checked Then
+
+            fiveKMedal -= -1
+
+        ElseIf radbtn10KMedal.Checked Then
+
+            tenKMedal -= -1
+
+        Else
+
+
+
+        End If
+
+
 
     End Sub
 
