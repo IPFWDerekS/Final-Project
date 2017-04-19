@@ -20,6 +20,15 @@
     Public xlargeShirt As Integer = 20
     'Xlarge Shirt is item #8
 
+    Public RaceCount As Integer = 0
+
+    Public CorralNumber As Integer = 0
+
+    Public MedalCount As Integer = 0
+
+
+
+
     Public ItemDictionary As New Dictionary(Of Integer, Integer)
 
 

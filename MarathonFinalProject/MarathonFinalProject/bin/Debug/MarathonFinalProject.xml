@@ -22,5 +22,12 @@ MarathonFinalProject
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="M:MarathonFinalProject.frmAddRunner.txtFirst_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ Key press for the First Name.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 </members>
 </doc>

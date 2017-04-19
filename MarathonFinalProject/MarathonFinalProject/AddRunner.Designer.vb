@@ -35,7 +35,7 @@ Partial Class frmAddRunner
         Me.txtFirst = New System.Windows.Forms.TextBox()
         Me.txtLast = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtboxAge = New System.Windows.Forms.TextBox()
         Me.cboShirts = New System.Windows.Forms.ComboBox()
         Me.grpboxRaceType = New System.Windows.Forms.GroupBox()
         Me.radbtn10KRace = New System.Windows.Forms.RadioButton()
@@ -44,7 +44,7 @@ Partial Class frmAddRunner
         Me.radbtnCorralC = New System.Windows.Forms.RadioButton()
         Me.radbtnCorralB = New System.Windows.Forms.RadioButton()
         Me.radbtnCorralA = New System.Windows.Forms.RadioButton()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.grpboxMedals = New System.Windows.Forms.GroupBox()
         Me.radbtn10KMedal = New System.Windows.Forms.RadioButton()
         Me.radbtn5KMedal = New System.Windows.Forms.RadioButton()
         Me.txtdisplayWater = New System.Windows.Forms.TextBox()
@@ -58,9 +58,10 @@ Partial Class frmAddRunner
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusStrip = New System.Windows.Forms.ToolStripStatusLabel()
         Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.grpboxRaceType.SuspendLayout()
         Me.grpboxCorralNumber.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.grpboxMedals.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.errProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,7 +78,7 @@ Partial Class frmAddRunner
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(344, 45)
+        Me.Label2.Location = New System.Drawing.Point(441, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 20)
         Me.Label2.TabIndex = 1
@@ -86,7 +87,7 @@ Partial Class frmAddRunner
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(344, 100)
+        Me.Label3.Location = New System.Drawing.Point(441, 100)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(94, 20)
         Me.Label3.TabIndex = 2
@@ -147,7 +148,7 @@ Partial Class frmAddRunner
         '
         'txtFirst
         '
-        Me.txtFirst.Location = New System.Drawing.Point(475, 39)
+        Me.txtFirst.Location = New System.Drawing.Point(572, 39)
         Me.txtFirst.Name = "txtFirst"
         Me.txtFirst.Size = New System.Drawing.Size(253, 26)
         Me.txtFirst.TabIndex = 14
@@ -155,7 +156,7 @@ Partial Class frmAddRunner
         '
         'txtLast
         '
-        Me.txtLast.Location = New System.Drawing.Point(475, 94)
+        Me.txtLast.Location = New System.Drawing.Point(572, 94)
         Me.txtLast.Name = "txtLast"
         Me.txtLast.Size = New System.Drawing.Size(253, 26)
         Me.txtLast.TabIndex = 15
@@ -170,13 +171,13 @@ Partial Class frmAddRunner
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Age:"
         '
-        'TextBox1
+        'txtboxAge
         '
-        Me.TextBox1.Location = New System.Drawing.Point(118, 97)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(76, 26)
-        Me.TextBox1.TabIndex = 17
-        Me.TextBox1.Tag = "Age"
+        Me.txtboxAge.Location = New System.Drawing.Point(118, 97)
+        Me.txtboxAge.Name = "txtboxAge"
+        Me.txtboxAge.Size = New System.Drawing.Size(76, 26)
+        Me.txtboxAge.TabIndex = 17
+        Me.txtboxAge.Tag = "Age"
         '
         'cboShirts
         '
@@ -208,6 +209,7 @@ Partial Class frmAddRunner
         Me.radbtn10KRace.Size = New System.Drawing.Size(104, 24)
         Me.radbtn10KRace.TabIndex = 1
         Me.radbtn10KRace.TabStop = True
+        Me.radbtn10KRace.Tag = "10 K Race"
         Me.radbtn10KRace.Text = "10K Race"
         Me.radbtn10KRace.UseVisualStyleBackColor = True
         '
@@ -219,6 +221,7 @@ Partial Class frmAddRunner
         Me.radbtn5K.Size = New System.Drawing.Size(95, 24)
         Me.radbtn5K.TabIndex = 0
         Me.radbtn5K.TabStop = True
+        Me.radbtn5K.Tag = "5K Race"
         Me.radbtn5K.Text = "5K Race"
         Me.radbtn5K.UseVisualStyleBackColor = True
         '
@@ -260,7 +263,7 @@ Partial Class frmAddRunner
         'radbtnCorralA
         '
         Me.radbtnCorralA.AutoSize = True
-        Me.radbtnCorralA.Location = New System.Drawing.Point(23, 26)
+        Me.radbtnCorralA.Location = New System.Drawing.Point(23, 25)
         Me.radbtnCorralA.Name = "radbtnCorralA"
         Me.radbtnCorralA.Size = New System.Drawing.Size(91, 24)
         Me.radbtnCorralA.TabIndex = 0
@@ -268,17 +271,17 @@ Partial Class frmAddRunner
         Me.radbtnCorralA.Text = "Corral A"
         Me.radbtnCorralA.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'grpboxMedals
         '
-        Me.GroupBox1.Controls.Add(Me.radbtn10KMedal)
-        Me.GroupBox1.Controls.Add(Me.radbtn5KMedal)
-        Me.GroupBox1.Location = New System.Drawing.Point(567, 255)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(200, 118)
-        Me.GroupBox1.TabIndex = 21
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Tag = "Medal"
-        Me.GroupBox1.Text = "grpboxMedals"
+        Me.grpboxMedals.Controls.Add(Me.radbtn10KMedal)
+        Me.grpboxMedals.Controls.Add(Me.radbtn5KMedal)
+        Me.grpboxMedals.Location = New System.Drawing.Point(625, 249)
+        Me.grpboxMedals.Name = "grpboxMedals"
+        Me.grpboxMedals.Size = New System.Drawing.Size(200, 118)
+        Me.grpboxMedals.TabIndex = 21
+        Me.grpboxMedals.TabStop = False
+        Me.grpboxMedals.Tag = "Medal"
+        Me.grpboxMedals.Text = "Medal:"
         '
         'radbtn10KMedal
         '
@@ -382,27 +385,33 @@ Partial Class frmAddRunner
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusStrip})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 662)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusStrip, Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 654)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(779, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(963, 30)
         Me.StatusStrip1.TabIndex = 30
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'StatusStrip
         '
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(0, 17)
+        Me.StatusStrip.Size = New System.Drawing.Size(0, 25)
         '
         'errProvider
         '
         Me.errProvider.ContainerControl = Me
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(180, 25)
+        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
+        '
         'frmAddRunner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(779, 684)
+        Me.ClientSize = New System.Drawing.Size(963, 684)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.txtdisplayShirts)
         Me.Controls.Add(Me.btnExit)
@@ -412,11 +421,11 @@ Partial Class frmAddRunner
         Me.Controls.Add(Me.txtdisplay5K)
         Me.Controls.Add(Me.txtDisplaySnack)
         Me.Controls.Add(Me.txtdisplayWater)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grpboxMedals)
         Me.Controls.Add(Me.grpboxCorralNumber)
         Me.Controls.Add(Me.grpboxRaceType)
         Me.Controls.Add(Me.cboShirts)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtboxAge)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtLast)
         Me.Controls.Add(Me.txtFirst)
@@ -435,8 +444,8 @@ Partial Class frmAddRunner
         Me.grpboxRaceType.PerformLayout()
         Me.grpboxCorralNumber.ResumeLayout(False)
         Me.grpboxCorralNumber.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.grpboxMedals.ResumeLayout(False)
+        Me.grpboxMedals.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.errProvider, System.ComponentModel.ISupportInitialize).EndInit()
@@ -457,7 +466,7 @@ Partial Class frmAddRunner
     Friend WithEvents txtFirst As TextBox
     Friend WithEvents txtLast As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtboxAge As TextBox
     Friend WithEvents cboShirts As ComboBox
     Friend WithEvents grpboxRaceType As GroupBox
     Friend WithEvents radbtn10KRace As RadioButton
@@ -466,7 +475,7 @@ Partial Class frmAddRunner
     Friend WithEvents radbtnCorralC As RadioButton
     Friend WithEvents radbtnCorralB As RadioButton
     Friend WithEvents radbtnCorralA As RadioButton
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grpboxMedals As GroupBox
     Friend WithEvents radbtn10KMedal As RadioButton
     Friend WithEvents radbtn5KMedal As RadioButton
     Friend WithEvents txtdisplayWater As TextBox
@@ -480,4 +489,5 @@ Partial Class frmAddRunner
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents StatusStrip As ToolStripStatusLabel
     Friend WithEvents errProvider As ErrorProvider
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 End Class

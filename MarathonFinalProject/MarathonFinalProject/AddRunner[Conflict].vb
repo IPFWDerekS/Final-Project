@@ -115,9 +115,6 @@ Public Class frmAddRunner
         'End If
 
 
-
-
-
         For i As Integer = Controls.Count - 1 To 0 Step -1
 
             If TypeOf Controls(i) Is ComboBox Then
@@ -175,45 +172,16 @@ Public Class frmAddRunner
 
                 Dim radbtn As RadioButton = CType(grpboxRaceType.Controls(i), RadioButton)
 
-                If Not radbtn.Checked Then
-
-                    'Increase it.
-                    RaceCount += 1
-
-
-                End If
-
-            End If
 
 
 
-        Next
+                If radbtn.Checked Then
 
 
-        If RaceCount = 2 Then
-
-            errProvider.SetError(grpboxRaceType, grpboxRaceType.Tag.ToString & " wasn't selected.")
-
-            grpboxRaceType.Focus()
-
-            Return
+                    errProvider.SetError(radbtn, radbtn.Tag.ToString & " is not selected.")
 
 
-
-        End If
-
-        For i As Integer = grpboxCorralNumber.Controls.Count - 1 To 0 Step -1
-
-
-            If TypeOf grpboxCorralNumber.Controls(i) Is RadioButton Then
-
-                Dim radbtn As RadioButton = CType(grpboxCorralNumber.Controls(i), RadioButton)
-
-                If Not radbtn.Checked Then
-
-                    'Increase it.
-                    CorralNumber += 1
-
+                    Return
 
                 End If
 
@@ -223,46 +191,40 @@ Public Class frmAddRunner
 
         Next
 
+        'If radiobutton.Enabled.ToString = "" Then
 
-        If CorralNumber = 3 Then
-
-
-            errProvider.SetError(grpboxCorralNumber, grpboxCorralNumber.Tag.ToString & " wasn't selected.")
-
-            grpboxCorralNumber.Focus()
-
-            Return
-
-        End If
+        '    errProvider.SetError(radiobutton, radiobutton.Tag.ToString & " is not selected.")
 
 
-        For i As Integer = grpboxMedals.Controls.Count - 1 To 0 Step -1
 
-            If TypeOf grpboxMedals.Controls(i) Is RadioButton Then
-
-                Dim radbtn As RadioButton = CType(grpboxMedals.Controls(i), RadioButton)
-
-                If Not radbtn.Checked Then
-
-                    MedalCount += 1
-
-                End If
+        'End If
 
 
-            End If
+        'For i As Integer = Controls.Count - 1 To 0 Step -1
 
-        Next
-
-        If MedalCount = 2 Then
-
-            errProvider.SetError(grpboxMedals, grpboxMedals.Tag.ToString & " wasn't selected.")
-
-            grpboxMedals.Focus()
+        '    If TypeOf Controls(i) Is ComboBox Then
 
 
-            Return
+        '        Dim cbobox As ComboBox = CType(Controls(i), ComboBox)
 
-        End If
+        '        If cbobox.SelectedIndex = -1 Then
+
+
+        'If TypeOf grpboxRaceType.Controls(i) Is RadioButton Then
+
+        '    Dim radiobutton As RadioButton = CType(Controls(i), RadioButton)
+
+        '    If radiobutton.Enabled.ToString = "" Then
+
+        '        errProvider.SetError(radiobutton, radiobutton.Tag.ToString & " is not selected.")
+
+
+
+        '    End If
+
+        'End If
+
+
 
 
 
@@ -284,8 +246,6 @@ Public Class frmAddRunner
 
 
         End If
-
-
 
 
 
