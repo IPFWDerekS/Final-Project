@@ -60,7 +60,6 @@ Public Class frmAddRunner
 
 
 
-
     End Sub
 
     Private Sub cboShirts_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboShirts.SelectedValueChanged
@@ -190,6 +189,32 @@ Public Class frmAddRunner
     End Sub
 
     Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs) Handles StatusStrip.Click
+
+    End Sub
+
+    Private Sub txtBibnumber_TextChanged(sender As Object, e As EventArgs) Handles txtBibnumber.TextChanged
+
+    End Sub
+
+    Private Sub txtBibnumber_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBibnumber.KeyPress
+
+        If Not Char.IsDigit(e.KeyChar) Then
+
+            e.Handled = True
+
+        End If
+
+        If e.KeyChar = vbBack Then
+
+            e.Handled = False
+
+        End If
+        '4 Digits only for the Bib number.
+        If txtBibnumber.Text.Length = 4 Then
+
+            e.Handled = True
+
+        End If
 
     End Sub
 End Class
