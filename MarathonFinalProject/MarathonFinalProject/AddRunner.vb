@@ -27,6 +27,33 @@ Public Class frmAddRunner
         txtdisplay10K.Text = tenKMedal.ToString
 
 
+        For i As Integer = Controls.Count - 1 To 0 Step -1
+
+            If TypeOf Controls(i) Is TextBox Then
+
+
+                Dim txt As TextBox = CType(Controls(i), TextBox)
+
+                txt.Text = ""
+
+
+            End If
+
+            If TypeOf Controls(i) Is ComboBox Then
+
+
+                Dim cbo As ComboBox = CType(Controls(i), ComboBox)
+
+                cbo.SelectedIndex = -1
+
+            End If
+
+
+
+        Next
+
+
+
     End Sub
 
     Private Sub txtdisplayShirts_TextChanged(sender As Object, e As EventArgs) Handles txtdisplayShirts.TextChanged

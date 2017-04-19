@@ -62,7 +62,7 @@ Partial Class frmViewRunner
         'dgvRunners
         '
         Me.dgvRunners.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRunners.Location = New System.Drawing.Point(50, 201)
+        Me.dgvRunners.Location = New System.Drawing.Point(56, 197)
         Me.dgvRunners.Name = "dgvRunners"
         Me.dgvRunners.RowTemplate.Height = 28
         Me.dgvRunners.Size = New System.Drawing.Size(634, 299)
