@@ -25,7 +25,7 @@
 
         Try
 
-            If adapter.Insert(pBib, pFirst, pLast, pAge, pShirtSize, pAge, pShirtSize, pRace, pCorral, pMedal) Then
+            If adapter.Insert(pBib, pFirst, pLast, pAge, pShirtSize, pRace, pCorral, pMedal) Then
 
                 result = True
 

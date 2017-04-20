@@ -2,6 +2,9 @@
 Option Explicit On
 
 Public Class frmAddRunner
+    Dim mRunner As New Runner()
+
+
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
@@ -298,9 +301,14 @@ Public Class frmAddRunner
 
         End If
 
-        ShirtSize = cboShirts.SelectedValue.ToString
+        ShirtSize = cboShirts.SelectedItem.ToString
 
-
+        'dgvStudents.DataSource = mStudents.Items()
+        'mStudents.Insert(CInt(txtID.Text), txtName.Text, txtMajor.Text)
+        mRunner.Insert(CInt(txtBibnumber.Text), txtFirst.Text,
+                       txtLast.Text, CInt(txtboxAge.Text),
+                       ShirtSize, RaceToRun,
+                       CorralLane, MedalAwarded)
 
 
     End Sub
@@ -399,7 +407,6 @@ Public Class frmAddRunner
 
 
         End If
-
 
 
     End Sub
