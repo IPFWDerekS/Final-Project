@@ -96,27 +96,6 @@ Public Class frmAddRunner
 
         errProvider.Clear()
 
-        'waterBottle += -1
-
-        'snack += -1
-
-        'If radbtn5KMedal.Checked Then
-
-        '    fiveKMedal += -1
-
-        'ElseIf radbtn10KMedal.Checked Then
-
-        '    tenKMedal += -1
-
-        'Else
-
-
-
-        'End If
-
-
-
-
 
         For i As Integer = Controls.Count - 1 To 0 Step -1
 
@@ -285,11 +264,49 @@ Public Class frmAddRunner
 
         End If
 
+        If radbtn10KMedal.Checked Then
+
+            MedalAwarded = "10K "
+
+        ElseIf radbtn5KMedal.Checked Then
+
+            MedalAwarded = "5K"
+
+        End If
+
+
+        If radbtnCorralA.Checked Then
+
+            CorralLane = "A"
+
+        ElseIf radbtnCorralB.Checked Then
+
+
+            CorralLane = "B"
+
+        Else
+
+            CorralLane = "C"
+
+        End If
+
+        If radbtn10KRace.Checked Then
+
+            RaceToRun = "10K"
+        Else
+            RaceToRun = "5K"
+
+        End If
+
+        ShirtSize = cboShirts.SelectedValue.ToString
 
 
 
 
     End Sub
+
+
+
 
     Private Sub ToolStripStatusLabel1_Click(sender As Object, e As EventArgs) Handles StatusStrip.Click
 

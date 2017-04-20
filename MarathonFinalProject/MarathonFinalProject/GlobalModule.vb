@@ -27,6 +27,17 @@
     Public MedalCount As Integer = 0
 
 
+    'The names of the selected objects respectively.
+    Public RaceToRun As String
+
+    Public CorralLane As String
+
+    Public MedalAwarded As String
+
+
+    Public ShirtSize As String
+
+
 
 
     Public ItemDictionary As New Dictionary(Of Integer, Integer)

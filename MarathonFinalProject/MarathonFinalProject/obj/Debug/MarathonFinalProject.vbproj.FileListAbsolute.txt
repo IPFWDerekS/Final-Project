@@ -13,3 +13,5 @@ C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\M
 C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\MarathonFinalProject\obj\Debug\MarathonFinalProject.frmAddRunner.resources
 C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\MarathonFinalProject\obj\Debug\MarathonFinalProject.frmViewRunner.resources
 C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\MarathonFinalProject\obj\Debug\MarathonFinalProject.frmViewInventory.resources
+C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\MarathonFinalProject\bin\Debug\Marathon.mdf
+C:\Users\dbsin\Google Drive\IPFW\Spring 203\Final Project\MarathonFinalProject\MarathonFinalProject\bin\Debug\Marathon_log.ldf
