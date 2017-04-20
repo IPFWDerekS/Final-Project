@@ -4,6 +4,9 @@
 
     Private Sub btnOkay_Click(sender As Object, e As EventArgs) Handles btnOkay.Click
 
+        RunnerTableAdapter.FindName(RunnerDataSet.Runner, txtName.Text)
+
+
     End Sub
 
     Private Sub frmViewRunner_Load(sender As Object, e As EventArgs) Handles MyBase.Load

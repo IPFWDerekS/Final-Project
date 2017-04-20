@@ -27,6 +27,9 @@ Partial Class frmViewRunner
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnOkay = New System.Windows.Forms.Button()
         Me.dgvRunners = New System.Windows.Forms.DataGridView()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnEmailConditions = New System.Windows.Forms.Button()
         Me.BibNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,9 +40,6 @@ Partial Class frmViewRunner
         Me.MedalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RunnerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RunnerDataSet = New MarathonFinalProject.RunnerDataSet()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.btnEmailConditions = New System.Windows.Forms.Button()
         Me.RunnerTableAdapter = New MarathonFinalProject.RunnerDataSetTableAdapters.RunnerTableAdapter()
         CType(Me.dgvRunners, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RunnerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +84,30 @@ Partial Class frmViewRunner
         Me.dgvRunners.RowTemplate.Height = 28
         Me.dgvRunners.Size = New System.Drawing.Size(892, 299)
         Me.dgvRunners.TabIndex = 3
+        '
+        'txtName
+        '
+        Me.txtName.Location = New System.Drawing.Point(135, 73)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(267, 26)
+        Me.txtName.TabIndex = 4
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(135, 116)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(267, 26)
+        Me.TextBox2.TabIndex = 5
+        '
+        'btnEmailConditions
+        '
+        Me.btnEmailConditions.Location = New System.Drawing.Point(557, 102)
+        Me.btnEmailConditions.Name = "btnEmailConditions"
+        Me.btnEmailConditions.Size = New System.Drawing.Size(105, 62)
+        Me.btnEmailConditions.TabIndex = 6
+        Me.btnEmailConditions.Text = "Email Conditions"
+        Me.btnEmailConditions.UseVisualStyleBackColor = True
         '
         'BibNumberDataGridViewTextBoxColumn
         '
@@ -142,31 +166,6 @@ Partial Class frmViewRunner
         '
         Me.RunnerDataSet.DataSetName = "RunnerDataSet"
         Me.RunnerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'txtName
-        '
-        Me.txtName.Enabled = False
-        Me.txtName.Location = New System.Drawing.Point(135, 73)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(267, 26)
-        Me.txtName.TabIndex = 4
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(135, 116)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(267, 26)
-        Me.TextBox2.TabIndex = 5
-        '
-        'btnEmailConditions
-        '
-        Me.btnEmailConditions.Location = New System.Drawing.Point(557, 102)
-        Me.btnEmailConditions.Name = "btnEmailConditions"
-        Me.btnEmailConditions.Size = New System.Drawing.Size(105, 62)
-        Me.btnEmailConditions.TabIndex = 6
-        Me.btnEmailConditions.Text = "Email Conditions"
-        Me.btnEmailConditions.UseVisualStyleBackColor = True
         '
         'RunnerTableAdapter
         '

@@ -989,12 +989,18 @@ Namespace RunnerDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT [Bib Number], [First Name], [Last Name], Age, [Shirt Size], Race, Corral, "& _ 
                 "Medal FROM dbo.Runner"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT [Bib Number], [First Name], [Last Name], Age, [Shirt Size], Race, Corral, "& _ 
+                "Medal"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM   Runner"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE ([First Name] LIKE @first + '%')"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@first", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "First Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1016,6 +1022,40 @@ Namespace RunnerDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As RunnerDataSet.RunnerDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As RunnerDataSet.RunnerDataTable = New RunnerDataSet.RunnerDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FindName(ByVal dataTable As RunnerDataSet.RunnerDataTable, ByVal first As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (first Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("first")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(first,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy(ByVal first As String) As RunnerDataSet.RunnerDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (first Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("first")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(first,String)
+            End If
             Dim dataTable As RunnerDataSet.RunnerDataTable = New RunnerDataSet.RunnerDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
