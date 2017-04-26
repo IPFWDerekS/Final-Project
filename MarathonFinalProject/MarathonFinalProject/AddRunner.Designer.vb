@@ -57,8 +57,8 @@ Partial Class frmAddRunner
         Me.txtdisplayShirts = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusStrip = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.errProvider = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.grpboxRaceType.SuspendLayout()
         Me.grpboxCorralNumber.SuspendLayout()
         Me.grpboxMedals.SuspendLayout()
@@ -385,27 +385,26 @@ Partial Class frmAddRunner
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusStrip, Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 654)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusStrip, Me.StatusLabel})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 662)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(963, 30)
+        Me.StatusStrip1.Size = New System.Drawing.Size(963, 22)
         Me.StatusStrip1.TabIndex = 30
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'StatusStrip
         '
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(0, 25)
+        Me.StatusStrip.Size = New System.Drawing.Size(0, 17)
+        '
+        'StatusLabel
+        '
+        Me.StatusLabel.Name = "StatusLabel"
+        Me.StatusLabel.Size = New System.Drawing.Size(0, 17)
         '
         'errProvider
         '
         Me.errProvider.ContainerControl = Me
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(180, 25)
-        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
         'frmAddRunner
         '
@@ -489,5 +488,5 @@ Partial Class frmAddRunner
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents StatusStrip As ToolStripStatusLabel
     Friend WithEvents errProvider As ErrorProvider
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents StatusLabel As ToolStripStatusLabel
 End Class

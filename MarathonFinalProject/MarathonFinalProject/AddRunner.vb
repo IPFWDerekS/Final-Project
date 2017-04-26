@@ -148,7 +148,14 @@ Public Class frmAddRunner
 
         Next
 
+        If CInt(txtboxAge.Text) < 15 Then
 
+            errProvider.SetError(txtboxAge, txtboxAge.Tag.ToString & " can't be younger than 15.")
+
+            txtboxAge.Focus()
+
+            Return
+        End If
 
         For i As Integer = grpboxRaceType.Controls.Count - 1 To 0 Step -1
 
@@ -410,4 +417,88 @@ Public Class frmAddRunner
 
 
     End Sub
+
+
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+
+        For i As Integer = Controls.Count - 1 To 0 Step -1
+
+            If TypeOf Controls(i) Is ComboBox Then
+
+
+                Dim cbobox As ComboBox = CType(Controls(i), ComboBox)
+
+                cbobox.SelectedIndex = -1
+
+
+
+
+            End If
+            'If a control is a listbox.
+            If TypeOf Controls(i) Is TextBox Then
+
+
+                Dim textbox As TextBox = CType(Controls(i), TextBox)
+
+
+
+                textbox.Text = ""
+
+
+            End If
+
+
+
+
+        Next
+
+        For i As Integer = grpboxRaceType.Controls.Count - 1 To 0 Step -1
+
+
+            If TypeOf grpboxRaceType.Controls(i) Is RadioButton Then
+
+                Dim radbtn As RadioButton = CType(grpboxRaceType.Controls(i), RadioButton)
+
+                radbtn.Checked = False
+
+
+            End If
+
+        Next
+
+
+        For i As Integer = grpboxCorralNumber.Controls.Count - 1 To 0 Step -1
+
+
+            If TypeOf grpboxCorralNumber.Controls(i) Is RadioButton Then
+
+                Dim radbtn As RadioButton = CType(grpboxCorralNumber.Controls(i), RadioButton)
+
+                radbtn.Checked = False
+
+            End If
+
+
+
+        Next
+
+        For i As Integer = grpboxMedals.Controls.Count - 1 To 0 Step -1
+
+            If TypeOf grpboxMedals.Controls(i) Is RadioButton Then
+
+                Dim radbtn As RadioButton = CType(grpboxMedals.Controls(i), RadioButton)
+
+                radbtn.Checked = False
+
+
+            End If
+
+        Next
+
+
+
+    End Sub
+
+
 End Class
